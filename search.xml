@@ -5,8 +5,8 @@
     
     <entry>
       <title>Javascript原生api的温习</title>
-      <link href="/lvyao.github.io/2019/09/18/Javascript%E5%8E%9F%E7%94%9Fapi%E7%9A%84%E6%B8%A9%E4%B9%A0/"/>
-      <url>/lvyao.github.io/2019/09/18/Javascript%E5%8E%9F%E7%94%9Fapi%E7%9A%84%E6%B8%A9%E4%B9%A0/</url>
+      <link href="/2019/09/18/Javascript%E5%8E%9F%E7%94%9Fapi%E7%9A%84%E6%B8%A9%E4%B9%A0/"/>
+      <url>/2019/09/18/Javascript%E5%8E%9F%E7%94%9Fapi%E7%9A%84%E6%B8%A9%E4%B9%A0/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -18,8 +18,8 @@
     
     <entry>
       <title>我在hexo+gitpages实现线上博客过程中的碰壁及解决办法</title>
-      <link href="/lvyao.github.io/2019/09/18/%E6%88%91%E5%9C%A8hexo+git%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%A2%B0%E5%A3%81%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
-      <url>/lvyao.github.io/2019/09/18/%E6%88%91%E5%9C%A8hexo+git%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%A2%B0%E5%A3%81%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+      <link href="/2019/09/18/%E6%88%91%E5%9C%A8hexo+git%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%A2%B0%E5%A3%81%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+      <url>/2019/09/18/%E6%88%91%E5%9C%A8hexo+git%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E7%A2%B0%E5%A3%81%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
       
         <content type="html"><![CDATA[<blockquote><p>hexo的使用最好就是参照官方走一遍流程，然后在碰壁时再搜索有相同经历的答案。<br>这样的好处的就是：安心。不必担心眼花缭乱。<br>以官方作标准，再吸取他人的经验成果，方能事半功倍。<br>此工具需要了解Markdown语法，yml文件。yml文件和json文件基本功能相同，写法结构不同而已。我个人是喜欢json文件的，更有层次感。<br>出现错误操作别慌，根据命令行提示寻找问题，甚至按照建议去执行。试错真的需要耐心，要相信自己。<br>#我的碰壁体验及收获</p></blockquote><ol><li><p>按照<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a>安装hexo-cli脚手架</p></li><li><p>按照官方的是浏览配置设置个人风格主题和配置，但实际操作会在这里耽误很多时间。建议暂时忽略配置，可先选个个性化主题，先去创建新的文章页，添加分类和标签，看看实际效果，这样有助于提高耐心继续下去。</p></li><li><p>一定要选一个让自己满意的主题，熟练以后自定义主题。</p></li><li><p>认清开主题配置文件与hexo配置文件的区别，找不到配置的位置去官网和利用编辑器的搜索功能ctrl+f。</p><ul><li>主题配置主要是个性化定制服务</li><li>hexo配置是全局适配服务，比如配置文件路径，设置deploy服务。</li></ul></li><li><p>将hexo发布到githubPage是上。安装git和秘钥（ssh）就不赘絮了。</p><ol><li><p>按照githubPage官方方案来，创建webname.git.io的仓库.在settings里可设置分支，默认master。</p></li><li><p>将本地已存在库与远程库建立联系。参考官方此处会遇到各种麻烦    </p><ol><li><p>在hexo的_config.yml配置文件中设置发布的git地址</p></li><li><p>下载hexo发布到git上的工具。去官网》部署查看工具。但是win32系统会警告一个叫fsevents的模块插件安装失败但自适应跳过安装成功。</p></li><li><p>然后执行hexo deploy时就会失败，提示你Git出问题了。</p><blockquote><p>这时你压根不知道git怎么就出问题了。开始怀疑版本问题，怀疑插件问题。<br>警告中提到无法与上游库取得联系。然后摸索中，还是用git remote 方法参数配置强行连接了远程库。还要git push 推送一次到origin master<br>然后你重新执行hexo d 还是有提示警告。我们往往容易忽略警告里的建议乱投医。<br>之前在一级目录下git初始化 git init，然后忘记添加.gitignore文件。所以就用git add commit push一系列操作来试试给推到远程库。不幸的是居然成功了连接没问题。<br>我把整个库都传上去了，这简直是雪上加霜。心态差点崩了。又找了一堆解决办法，最后强行用git rm把远程库全删了。<br>排除了连接问题，那就是hexo d 发布出了问题。又仔细看了看警告详情。虽然不懂，但跟着提示安装了两个插件。每安装一个，都要发布一次。又试错两次就莫名其妙的成功了。<br>4.总结hexo到git的正确过程：</p></blockquote><ol><li><p>在_config.yml文件中设置deploy</p></li><li><p>虽然设置了deploy，但依然要用git的方法remote来先强行关联远程库</p></li><li><p>npm安装hexo-deploy-git插件时出现环境不兼容问题，会推荐npm adult fix 和npm adult detail ，还是优先看detail。以后此类运行环境问题跟着建议走就行了，它让安什么就什么。官方给的是正常情况安装，意外情况的补丁官网也预测不到。</p></li><li><p>利用别名 alias加快工作效率</p> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alias hs =<span class="string">'hexo clean &amp;&amp; hexo generate &amp;&amp; hexo server'</span></span><br><span class="line">alias hd =<span class="string">'hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy'</span></span><br></pre></td></tr></table></figure></li><li><p>最后再说一次:<strong>试错不需要成本</strong>    </p></li></ol></li></ol></li></ol></li></ol><p>##推荐<br><a href="https://yelog.org" target="_blank" rel="noopener">本网站主题3-hexo的作者的博客有此主题的详细配置说明</a></p>]]></content>
       
@@ -43,8 +43,8 @@
     
     <entry>
       <title>about</title>
-      <link href="/lvyao.github.io/2019/09/17/about/"/>
-      <url>/lvyao.github.io/2019/09/17/about/</url>
+      <link href="/2019/09/17/about/"/>
+      <url>/2019/09/17/about/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -56,8 +56,8 @@
     
     <entry>
       <title>你好，缘来</title>
-      <link href="/lvyao.github.io/2019/09/17/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E7%BC%98%E6%9D%A5/"/>
-      <url>/lvyao.github.io/2019/09/17/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E7%BC%98%E6%9D%A5/</url>
+      <link href="/2019/09/17/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E7%BC%98%E6%9D%A5/"/>
+      <url>/2019/09/17/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E7%BC%98%E6%9D%A5/</url>
       
         <content type="html"><![CDATA[<blockquote><p>云深不知处，感谢你的到访。<br>有梦为马，随处可栖。<br>薛定猫的世界永远介于确定不确定的状态，我并不偏爱量子力学，倒偏爱这里面的哲学观。<br>下面送给大家一篇我们以前都学过你可能忘了我还一直喜欢的诗《未选择的路》。</p></blockquote><h2 id="未选择的路"><a href="#未选择的路" class="headerlink" title="未选择的路"></a>未选择的路</h2><pre><code>---  罗伯特·弗罗斯特【美】</code></pre><p><img src="/static/img/road_jz.jpg" alt="抉择"><br>黄色的林子里有两条路，<br>很遗憾我无法同时选择两者。<br>身在旅途的我久久站立，<br>对着其中一条极目眺望，<br>直到它蜿蜒拐进远处的树丛。</p><p>我选择了另外的一条，天经地义，<br>也许更为诱人<br>因为它充满荆棘，需要开拓；<br>然而这样的路过<br>并未引起太大的改变。<br>那天清晨这两条小路一起静卧在<br>无人踩过的树叶丛中<br>哦，我把另一条路留给了明天！<br>明知路连着路，<br>我不知是否该回头。<br>我将轻轻叹息，叙述这一切<br>许多许多年以后：<br>林子里有两条路，我——<br>选择了行人稀少的那一条<br>它改变了我的一生。 </p>]]></content>
       
@@ -81,8 +81,8 @@
     
     <entry>
       <title>Hello World</title>
-      <link href="/lvyao.github.io/2019/09/16/hello-world/"/>
-      <url>/lvyao.github.io/2019/09/16/hello-world/</url>
+      <link href="/2019/09/16/hello-world/"/>
+      <url>/2019/09/16/hello-world/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
       
