@@ -58,13 +58,27 @@
     
     
     <entry>
-      <title>Javascript原生api的温习</title>
+      <title>Javascript的标准内置对象</title>
       <link href="/2019/09/18/Javascript%E5%8E%9F%E7%94%9Fapi%E7%9A%84%E6%B8%A9%E4%B9%A0/"/>
       <url>/2019/09/18/Javascript%E5%8E%9F%E7%94%9Fapi%E7%9A%84%E6%B8%A9%E4%B9%A0/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<blockquote><p>本来说是梳理下常用的js方法，但总结来总结去看时官方的文档好。有啥问题看官方。<br>实际用到时基本就是针对标准内置对象的组合和封装。<br>以下只会展示一些从项目需求中会常用到的场景和方法总结。</p></blockquote><h1 id="官方指南–Javascript的标准内置对象"><a href="#官方指南–Javascript的标准内置对象" class="headerlink" title="官方指南–Javascript的标准内置对象"></a>官方指南–<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects" target="_blank" rel="noopener">Javascript的标准内置对象</a></h1><h1 id="数组–Array–官方文档"><a href="#数组–Array–官方文档" class="headerlink" title="数组–Array–官方文档"></a>数组–Array–<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank" rel="noopener">官方文档</a></h1><h3 id="1-array-sort"><a href="#1-array-sort" class="headerlink" title="1. array.sort()"></a>1. array.sort()</h3><p>排序，实现正序，倒序，随机序列<br><strong>举例</strong><br><img src="https://p6-tt.byteimg.com/img/pgc-image/7ca8c238d73147abb3109908bfa42a01~noop_1346x590.jpeg" alt="洗牌算法"></p><h3 id="2-array-from"><a href="#2-array-from" class="headerlink" title="2. array.from()"></a>2. array.from()</h3><p>使某些非数组对象转数组，调用数组的方法。</p><blockquote><p>Array.from() 方法从一个类似数组或可迭代对象中创建一个新的，浅拷贝的数组实例。<br>伪数组对象（拥有一个 length 属性和若干索引属性的任意对象）,如字符串，属性是数字的对象等<br>可迭代对象（可以获取对象中的元素,如 Map和 Set 等）</p></blockquote><h1 id="对象–Object–官方文档"><a href="#对象–Object–官方文档" class="headerlink" title="对象–Object–官方文档"></a>对象–Object–<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" rel="noopener">官方文档</a></h1>]]></content>
       
       
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+        </tags>
       
     </entry>
     
@@ -96,13 +110,19 @@
     
     
     <entry>
-      <title>about</title>
-      <link href="/2019/09/17/about/"/>
-      <url>/2019/09/17/about/</url>
+      <title>aboutME</title>
+      <link href="/2019/09/17/aboutME/"/>
+      <url>/2019/09/17/aboutME/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<div align="center">    <h1>this is my world</h1>    <h1>我的理想乡</h1>    <img width="600" height="400" src="https://c-ssl.duitang.com/uploads/item/201707/27/20170727223202_KMUcJ.jpeg"></div><p><img src="https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/wh%3D600%2C800/sign=be3bd8b16e600c33f02cd6ce2a7c7d37/f703738da977391266439ec4fd198618367ae22a.jpg" alt="无限剑制吟唱"></p><blockquote><p>以前我很喜欢一首歌叫《相反的我》，喜欢看热血动漫，渴望了解世界的真相<br>我一直相信人来到这世上是有使命的,哪怕现在的我毫无意义<br>我化身谭嗣同，化身鲁迅，化身金木研，化身卫宫，化身薛定谔的猫<br>我在质疑社会到质疑自己，最后成为一只不知生死的猫<br>我还是很享受这场游戏的，多彩的世界配好奇的我，很搭!</p></blockquote><blockquote><p>有人会好奇为啥我一个学生物技术的怎么现在做起了前端开发<br>其实上大学的时候我很想学农业<br>而我最终的梦想是在我家乡的小县城开一个最棒的书店<br>学生物技术是因为农民也歧视农民职业，乡里舆论压力太大，生物技术就高大上多了<br>为啥学前端是因为生物技术是未来趋势不是当下趋势，当下是互联网时代，前端是了解互联网的窗口，也是我了解当下社会的窗口。最重要的是意识到互联网的思维。<br>我从没后悔学生物技术，它让我从用科学的方式认识到生命的本质。让我更冷静的面对疾病和生命的终结。至少不会生病乱投医乱吃药，乱制造紧张情绪。<br>互联网也不是我的终点，有机会我还想深入学习下金融和法律知识。因为金融是当下世界运作的基础。因为法律是不是胜利即是正义。</p></blockquote><blockquote><p>这世界上各行各业都好似有一扇门，而且每一道门都有一道稍稍高一点的坎。<br>前人总是劝诫我们脚踏实地，选一行待在那里不要动，时间久了自然就学到东西。<br>而现在的我只想当个敲门人，看看里面究竟是什么。<br>这很浪费时间，但我乐此不疲。</p></blockquote><center>---------------连世界都没观过，谈什么世界观-----------------</center>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> ME </tag>
+            
+        </tags>
       
     </entry>
     
